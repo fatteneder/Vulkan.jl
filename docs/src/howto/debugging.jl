@@ -22,7 +22,7 @@ Then, we will define a C function to be called when messages are received. We us
 const debug_callback_c = @cfunction(default_debug_callback, UInt32, (DebugUtilsMessageSeverityFlagEXT, DebugUtilsMessageTypeFlagEXT, Ptr{VkCore.VkDebugUtilsMessengerCallbackDataEXT}, Ptr{Cvoid}))
 ```
 
-You need then need to define which message types and logging levels you want to include. Note that only setting e.g. `DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT` will not enable you the other levels, you need to set them all explicitly.
+You then need to define which message types and logging levels you want to include. Note that only setting e.g. `DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT` will not enable you the other levels, you need to set them all explicitly.
 
 ```julia
 # Include all severity messages. You can usually leave out
