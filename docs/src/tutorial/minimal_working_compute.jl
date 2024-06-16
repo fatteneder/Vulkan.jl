@@ -201,8 +201,8 @@ pipeline_info = ComputePipelineCreateInfo(
         "main", # this needs to match the function name in the shader
         specialization_info = SpecializationInfo(
             [SpecializationMapEntry(0, 0, 4)],
-            UInt64(4),
-            Ptr{Nothing}(pointer(spec_consts)),
+            Ptr{Nothing}(pointer(spec_consts));
+            data_size=UInt64(4)
         ),
     ),
     pl,
